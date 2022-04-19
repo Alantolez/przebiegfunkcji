@@ -110,16 +110,16 @@
           <tr>
             <th><span class="math">\[x\]</span></th>
             <th>
-              <span class="math">\[\left(\infty,-4\right)\]</span>
+              <span class="math">\[(\infty,-3)\]</span>
             </th>
-            <th><span class="math">\[-4\]</span></th>
-            <th><span class="math">\[\left(-4,-2\right)\]</span></th>
-            <th><span class="math">\[-2\]</span></th>
-            <th><span class="math">\[\left(-2,-1\right)\]</span></th>
+            <th><span class="math">\[-3\]</span></th>
+            <th><span class="math">\[(-3,-\sqrt3)\]</span></th>
+            <th><span class="math">\[-\sqrt3\]</span></th>
+            <th><span class="math">\[(-\sqrt3,-1)\]</span></th>
             <th><span class="math">\[-1\]</span></th>
-            <th><span class="math">\[\left(-1,2\right)\]</span></th>
-            <th><span class="math">\[2\]</span></th>
-            <th><span class="math">\[\left(2,\infty\right)\]</span></th>
+            <th><span class="math">\[(-1,\sqrt3)\]</span></th>
+            <th><span class="math">\[\sqrt3\]</span></th>
+            <th><span class="math">\[(\sqrt3,\infty)\]</span></th>
           </tr>
           <tr>
             <th><span class="math">\[{f}'(x)\]</span></th>
@@ -136,19 +136,19 @@
           <tr>
             <th><span class="math">\[f(x)\]</span></th>
             <th>
-              <span class="math">\[^{1}\searrow_{\frac{3}{4}}\]</span>
-            </th>
-            <th><span class="math">\[y_{max}=\frac{3}{4}\]</span></th>
-            <th>
-              <span class="math">\[_{\frac{3}{4}}\nearrow^{\infty}\]</span>
-            </th>
-            <th><span class="math">\[X\]</span></th>
-            <th>
-              <span class="math">\[_{-\infty}\nearrow^{0}\]</span>
+              <span class="math">\[^{1}\searrow_{0}\]</span>
             </th>
             <th><span class="math">\[y_{min}=0\]</span></th>
             <th>
-              <span class="math">\[^{0}\searrow_{-\infty}\]</span>
+              <span class="math">\[_{0}\nearrow^{\infty}\]</span>
+            </th>
+            <th><span class="math">\[X\]</span></th>
+            <th>
+              <span class="math">\[_{-\infty}\nearrow^{-2}\]</span>
+            </th>
+            <th><span class="math">\[y_{max}=-2\]</span></th>
+            <th>
+              <span class="math">\[^{-2}\searrow_{-\infty}\]</span>
             </th>
             <th><span class="math">\[X\]</span></th>
             <th><span class="math">\[^{\infty}\searrow_{1}\]</span></th>
@@ -156,7 +156,7 @@
         </table>
       </div>
     </div>
-    <div class="block">
+    <div class="tile">
         <h2 align="middle">10. Wykres funkcji:</h2>
         <div style="width: 80%; height: 40%; margin-left: 10%">
           <canvas id="mainChart" width="200px" height="100px"></canvas>
@@ -291,10 +291,10 @@
           var forb = [];
   
           generateData_xyforbp_0("-6*x*x-24*x-18", -10, -3, 0.01, true, false);
-          generateData_xyforbp_0("-6*x*x-24*x-18", -3, -2, 0.01, false, true);
-          generateData_xyforbp_0("-6*x*x-24*x-18", -2, -1, 0.01, true, false);
-          generateData_xyforbp_0("-6*x*x-24*x-18", -1, 2, 0.01, false, true);
-          generateData_xyforbp_0("-6*x*x-24*x-18", 2, 10, 0.01, false, false);
+          generateData_xyforbp_0("-6*x*x-24*x-18", -3, -1, 0.01, false, true);
+          generateData_xyforbp_0("-6*x*x-24*x-18", -1.73205, -1, 0.01, true, false);
+          generateData_xyforbp_0("-6*x*x-24*x-18", -1, 1.73205, 0.01, false, true);
+          generateData_xyforbp_0("-6*x*x-24*x-18", 1.73205, 10, 0.01, false, false);
           generateData_OXY(-10, 10, 0.01);
   
           const myChart = new Chart("DerChart", {
@@ -387,8 +387,8 @@
               p_0.push("-0.5");
             }
             if (fr) {
-              forb.push("0.5");
               forb.push("-0.5");
+              forb.push("0.5");
             }
           }
           function generateData_OXY(start, end, step) {
